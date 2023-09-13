@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post',
@@ -13,6 +14,7 @@ export class PostComponent {
 
   constructor(
     private formBuilder: FormBuilder,
+    private postService: PostService
   ) {
     this.postInput = this.formBuilder.control({
       value: '',
@@ -25,6 +27,8 @@ export class PostComponent {
   }
 
   sendPost() {
-    alert(this.postInput.value);
+    this.postService.addPost(this.postInput.value);
+    this.postInput.setValue('');
+    this.postRemains = this.postMaxLength;
   }
 }

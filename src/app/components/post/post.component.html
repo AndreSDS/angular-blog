@@ -2,7 +2,7 @@
   <div class="flex justify-center w-full">
     <div class="flex-shrink-0 mr-5">
       <div
-        class="cursor-pointer font-bold w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center"
+        class="cursor-pointer font-bold w-12 h-12 bg-blue-200 text-blue-600 rounded-full flex items-center justify-center"
       >
         A
       </div>
@@ -11,9 +11,10 @@
     <div class="flex-1">
       <form>
         <textarea
-          [formControl]="postInput"
+          formControl="postInput"
           [maxLength]="postMaxLength"
           (input)="setPostRemains()"
+          (keyup.enter)="sendPost()"
           class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 resize-none border border-transparent rounded-lg py-2 px-4 block w-full appearance-none leading-normal font-light placeholder-gray-700"
           placeholder="What's on your mind?"
           rows="3"
@@ -28,7 +29,7 @@
 
           <div class="mt-5">
             <button
-            (click)="sendPost()"
+              (click)="sendPost()"
               class="w-32 focus:outline-none border border-transparent py-2 px-5 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg shadow text-center"
               type="button"
             >
