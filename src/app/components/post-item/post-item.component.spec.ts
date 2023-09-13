@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TweetComponent } from './tweet.component';
+import { PostItemComponent } from './post-item.component';
 
-describe('TweetComponent', () => {
-  let component: TweetComponent;
-  let fixture: ComponentFixture<TweetComponent>;
+describe('PostItemComponent', () => {
+  let component: PostItemComponent;
+  let fixture: ComponentFixture<PostItemComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TweetComponent]
+      declarations: [PostItemComponent]
     });
-    fixture = TestBed.createComponent(TweetComponent);
+    fixture = TestBed.createComponent(PostItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
