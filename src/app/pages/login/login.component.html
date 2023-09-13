@@ -1,0 +1,42 @@
+<section
+  class="flex items-center w-[350px] bg-white rounded-lg shadow p-6 container mx-auto"
+>
+  <form
+    [formGroup]="formLogin"
+    (ngSubmit)="onLogin()"
+    class="w-full flex flex-col gap-4"
+  >
+    <div>
+      <label for="userName">Nome</label>
+
+      <input
+        type="text"
+        id="userName"
+        formControlName="userName"
+        placeholder="User name"
+        class="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200"
+      />
+    </div>
+
+    <div>
+      <label for="password">Senha</label>
+
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        placeholder="Password"
+        class="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200"
+      />
+    </div>
+
+    <div class="text-center lg:text-left">
+      <button
+        type="submit"
+        class="inline-block rounded bg-orange-600 px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow transition duration-150 ease-in-out hover:bg-orange-700"
+      >
+        Entrar
+      </button>
+    </div>
+  </form>
+</section>
